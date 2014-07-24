@@ -37,6 +37,7 @@ public class SessionSupport implements MiddlewareHandler {
             }
             request.attribute("session", sessionData);
         }
+        next.next();
     }
 
     public static Object getSession(final Request request, final String key) {
