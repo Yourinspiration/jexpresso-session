@@ -22,7 +22,8 @@ public class SessionSupport implements MiddlewareHandler {
     @Override
     public void handle(final Request request, final Response response, final Next next) {
         if (request.cookie(COOKIE_NAME) == null) {
-            final String sessionId = UUID.randomUUID().toString();
+            final String sessionId = UUID.randomUUID().toString().replaceAll("-", "")
+                    + UUID.randomUUID().toString().replaceAll("-", "");
             final Cookie cookie = new DefaultCookie(COOKIE_NAME, sessionId);
             response.cookie(cookie);
             final Map<String, Object> sessionData = new HashMap<>();
