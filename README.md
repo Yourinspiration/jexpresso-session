@@ -6,8 +6,12 @@ Middleware for JExpresso to provide session support.
 
 ```xml
 <repository>
-  <id>nexus.yourinspiration.de</id>
+  <id>yourinspiration.realeases</id>
   <url>http://nexus.yourinspiration.de/nexus/content/repositories/releases/</url>
+</repository>
+<repository>
+  <id>yourinspiration.snapshots</id>
+  <url>http://nexus.yourinspiration.de/nexus/content/repositories/snapshots/</url>
 </repository>
 ```
 
