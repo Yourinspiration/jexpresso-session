@@ -21,6 +21,21 @@ Middleware for JExpresso to provide session support.
 
 ## Usage
 
+
+### General
+
+The session data will be stored as a request attribute. To retrieve the current session call the attribute() method of the request object, or use the static helper method of the JExpressoSession class.
+
+```java
+Session session = (Session) req.attribute(JExpressoSession.SESSION_ATTR);
+```
+
+```java
+Session session = JExpressoSession.session(req);
+```
+
+The Session interface provides methods to get and set data from/to the session, and a method to invalidate the current session.
+
 ### In Memory Store
 
 ```java
