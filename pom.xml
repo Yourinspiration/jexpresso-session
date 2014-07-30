@@ -61,7 +61,7 @@
 		<name>Yourinspiration</name>
 		<url>http://yourinspiration.de</url>
 	</organization>
-	
+
 	<repositories>
 		<repository>
 			<id>nexus.yourinspiration.de</id>
@@ -80,6 +80,11 @@
 			<groupId>de.yourinspiration</groupId>
 			<artifactId>jexpresso</artifactId>
 			<version>1.0.0-RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.12.3</version>
 		</dependency>
 	</dependencies>
 

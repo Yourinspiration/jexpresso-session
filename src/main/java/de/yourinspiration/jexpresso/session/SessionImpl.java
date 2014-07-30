@@ -23,8 +23,8 @@ public class SessionImpl implements Session {
     }
 
     @Override
-    public Serializable get(final String name) {
-        return sessionStore.get(name, sessionId);
+    public <T extends Serializable> T get(final String name, final Class<T> clazz) {
+        return sessionStore.get(name, sessionId, clazz);
     }
 
     @Override

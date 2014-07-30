@@ -40,8 +40,8 @@ public class SessionImplTest {
 
     @Test
     public void testGet() {
-        Mockito.when(sessionStore.get("test", sessionId)).thenReturn("myValue");
-        assertEquals("myValue", sessionImpl.get("test"));
+        Mockito.when(sessionStore.get("test", sessionId, String.class)).thenReturn("myValue");
+        assertEquals("myValue", sessionImpl.get("test", String.class));
     }
 
     @Test

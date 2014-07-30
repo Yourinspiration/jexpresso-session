@@ -17,7 +17,7 @@ public interface Session {
      *            the name
      * @return returns <code>null</code> if no such name exists
      */
-    Serializable get(final String name);
+    <T extends Serializable> T get(final String name, final Class<T> clazz);
 
     /**
      * Set the value for the given name.

@@ -20,7 +20,7 @@ public interface SessionStore {
      *            the current sessionId
      * @return returns <code>null</code> if no such name exists
      */
-    Serializable get(final String name, final String sessionId);
+    <T extends Serializable> T get(final String name, final String sessionId, final Class<T> clazz);
 
     /**
      * Sets value for the given name. The name must not be null.

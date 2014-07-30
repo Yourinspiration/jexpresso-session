@@ -23,7 +23,7 @@ public class InMemoryStoreTest {
     @Test
     public void testSetAndGet() {
         store.set("key", "value", "4711");
-        assertEquals("value", store.get("key", "4711"));
+        assertEquals("value", store.get("key", "4711", String.class));
     }
 
     @Test
