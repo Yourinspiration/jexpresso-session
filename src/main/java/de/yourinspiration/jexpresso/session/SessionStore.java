@@ -18,6 +18,8 @@ public interface SessionStore {
      *            the name of the session data
      * @param sessionId
      *            the current sessionId
+     * @param clazz
+     *            the class of the session data
      * @return returns <code>null</code> if no such name exists
      */
     <T extends Serializable> T get(final String name, final String sessionId, final Class<T> clazz);

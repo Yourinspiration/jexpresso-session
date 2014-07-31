@@ -14,7 +14,9 @@ public interface Session {
      * Get the session data for the given name.
      * 
      * @param name
-     *            the name
+     *            the name of the session value
+     * @param clazz
+     *            the class of the value
      * @return returns <code>null</code> if no such name exists
      */
     <T extends Serializable> T get(final String name, final Class<T> clazz);

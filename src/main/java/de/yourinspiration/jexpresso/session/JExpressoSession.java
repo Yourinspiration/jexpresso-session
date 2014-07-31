@@ -10,6 +10,13 @@ import de.yourinspiration.jexpresso.Next;
 import de.yourinspiration.jexpresso.Request;
 import de.yourinspiration.jexpresso.Response;
 
+/**
+ * A middleware component for session support. A session id (JEXPRESSIONID) will
+ * be stored as a cookie.
+ * 
+ * @author Marcel Härle
+ *
+ */
 public class JExpressoSession implements MiddlewareHandler {
 
     public static final String COOKIE_NAME = "JEXPRESSOSESSIONID";
@@ -17,6 +24,12 @@ public class JExpressoSession implements MiddlewareHandler {
 
     private final SessionStore sessionStore;
 
+    /**
+     * Constructs a new session middleware with the given session store.
+     * 
+     * @param sessionStore
+     *            the session store
+     */
     public JExpressoSession(final SessionStore sessionStore) {
         this.sessionStore = sessionStore;
     }

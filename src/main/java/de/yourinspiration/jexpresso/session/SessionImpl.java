@@ -16,6 +16,14 @@ public class SessionImpl implements Session {
     private final SessionStore sessionStore;
     private final String sessionId;
 
+    /**
+     * Constructs a new object.
+     * 
+     * @param request
+     *            the request
+     * @param sessionStore
+     *            the session store
+     */
     protected SessionImpl(final Request request, final SessionStore sessionStore) {
         this.request = request;
         this.sessionStore = sessionStore;

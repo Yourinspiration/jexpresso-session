@@ -8,6 +8,13 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 
+/**
+ * An implementation for {@link SessionStore} that stores session data in a
+ * MongoDB database.
+ * 
+ * @author Marcel Härle
+ *
+ */
 public class MongoStore implements SessionStore {
 
     private static final String DATA_FIELD = "data";
@@ -17,6 +24,17 @@ public class MongoStore implements SessionStore {
     private final DBCollection collection;
     private final Gson gson = new Gson();
 
+    /**
+     * Constructs a new {@link MongoStore}.
+     * 
+     * @param mongo
+     *            the mongo db connection
+     * @param dbname
+     *            the name of the database
+     * @param collection
+     *            the name of the collection to be used for storing the session
+     *            data
+     */
     public MongoStore(final Mongo mongo, final String dbname, final String collection) {
         this.collection = mongo.getDB(dbname).getCollection(collection);
     }
