@@ -1,25 +1,16 @@
 # JExpresso Session Support Middleware
 
-Middleware for JExpresso to provide session support.
+Middleware for JExpresso providing session support.
 
 ## Maven
 
-```xml
-<repository>
-  <id>yourinspiration.realeases</id>
-  <url>http://nexus.yourinspiration.de/nexus/content/repositories/releases/</url>
-</repository>
-<repository>
-  <id>yourinspiration.snapshots</id>
-  <url>http://nexus.yourinspiration.de/nexus/content/repositories/snapshots/</url>
-</repository>
-```
+Latest stable release:
 
 ```xml
 <dependency>
   <groupId>de.yourinspiration</groupId>
   <artifactId>jexpresso-session</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
